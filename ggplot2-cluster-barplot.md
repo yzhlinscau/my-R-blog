@@ -14,7 +14,7 @@ tags:
 <!--more-->
 有网友给我留言，如何绘制类似下述图形：
 
-<img src="/../../../../../../programming/r/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-2-1.png" width="85%" style="display: block; margin: auto;" />
+<img src="img/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-2-1.png" width="85%" style="display: block; margin: auto;" />
 
 上述展示的图形，是我用ggplot2包绘制的，与网友提问的稍有区别，但已经很接近了。上面的图，如何实现呢？首先，该图肯定有左右两张图组成，于是就成了如何用ggplot2分别绘制左图和右图。左图实际上是聚类图，右图实际上是条形图。确定了思路，就好办了。
 
@@ -87,7 +87,7 @@ aa向量的作用是用于标注距离的刻度。现在就可以使用ggplot2�
 ``` 
 代码说明：进化树数据在`segment(ddata)`中，分别含有x、y、xend和yend，通过`geom_segment()`绘制进化树。标签数据在`label(ddata)`，分别含有x、y和label,通过`geom_text()`添加标签。`segment()`、`label()`来自ggdendro包。
 
-<img src="/../../../../../../programming/r/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-4-1.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-4-1.png" width="65%" style="display: block; margin: auto;" />
 ok，进化树或聚类图基本成型。如果读者细心的话，会看到图下方的刻度超出0，我目前还没找到好的方法来解决该问题。在代码中，我设置让标签超出0，感兴趣的读者，可以自行研究。
 
 (2) 使用ggplot2包绘制条形图
@@ -130,7 +130,7 @@ ok，进化树或聚类图基本成型。如果读者细心的话，会看到图
 ``` 
 代码说明：这里的条形图，与常见的不同，用了x、y变量映射，X指定样地，y指定数值，Ind指定指标并用不同颜色填充。geom\_bar()中的参数`stat="identity"`，必须是这样的，因为我们要对x变量(即样地sample)指定y数值(No)。参数`reverse=TRUE`的作用是让图例与条形图的对应关系更直观，读者可以修改为`reverse=FALSE`，通过查看图形变化，即可明白。
 
-<img src="/../../../../../../programming/r/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-6-1.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/ggplot2-cluster-barplot_files/figure-html/unnamed-chunk-6-1.png" width="65%" style="display: block; margin: auto;" />
 
 条形图标签如何与进化树标签一致呢？实现代码如下：
 ``` R
