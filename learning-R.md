@@ -102,7 +102,7 @@ blkM.bdR <- remlf90(
 plot(blkM.bdR, 'residuals')
 ```
 通过上述的简短plot()代码即可绘图，但这不代表我们可以随意传递一份数据给plot()就能得到类似图形。
-<img src="../../../../../../img/Rplot.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/Rplot.png" width="65%" style="display: block; margin: auto;" />
 
 因此，应该了解模型运行结果blkM.bdR的属性，通过class()和mode()运行结果可知，blkM.bdR属性为breedR和remlf90，并且数据结构是列表list。
 ```r
@@ -122,7 +122,7 @@ mode(blkM.bdR)
  ...
 ```
 如果想要查看plot.remlf90()的具体代码，只需输入`getAnywhere('plot.remlf90')`即可。   
-<img src="../../../../../../img/fig1.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/fig1.png" width="65%" style="display: block; margin: auto;" />
 
 通过plot.remlf90()函数代码，可知与上述图形的相关代码部分如下：
 ```r
@@ -140,7 +140,7 @@ function (x, type = c("phenotype", "fitted", "spatial", "fullspatial",
 ```
 
 如果想要知道如何使用plot.remlf90()，只需输入`?plot.remlf90`即可搜到其用法：         
-<img src="../../../../../../img/fig2.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/fig2.png" width="65%" style="display: block; margin: auto;" />
 
 对于R初学者的忠告，**<span style="color:red">学R是一个过程，不要急功近利得学！</span>**慢慢参透数据结构和函数里数据属性与使用条件。只要领会了这点，并学会有技巧地检索问题，R的学习很快就会成为一种乐趣！
 
