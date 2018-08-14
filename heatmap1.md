@@ -79,7 +79,7 @@ head(mdd)
 ``` R
     (pheat=ggplot(data = mdd, aes(x=variable, y=Prov, fill=value))+geom_tile())
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h1-1.png" alt="默认heatmap图" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h1-1.png" alt="默认heatmap图" width="75%" />
 <p class="caption">
 默认heatmap图
 </p>
@@ -88,7 +88,7 @@ head(mdd)
 ``` R
     pheat+ scale_fill_gradientn(colours = terrain.colors(20))
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h2-1.png" alt="heatmap图-修改色差" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h2-1.png" alt="heatmap图-修改色差" width="75%" />
 <p class="caption">
 heatmap图-修改色差
 </p>
@@ -108,7 +108,7 @@ ggplot(data, aes(x=,y=, fill=))+ geom\_tile()
     (pcorr=ggplot(data = cormat, aes(x=Var1, y=Var2, fill=value)) + 
       geom_tile()+scale_fill_gradient2(low="darkred", high="darkgreen"))
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h3-1.png" alt="默认相关图" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h3-1.png" alt="默认相关图" width="75%" />
 <p class="caption">
 默认相关图
 </p>
@@ -125,7 +125,7 @@ ggplot(data, aes(x=,y=, fill=))+ geom\_tile()
 
     pcorr %+% cormat1
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h4-1.png" alt="相关图-聚类排序" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h4-1.png" alt="相关图-聚类排序" width="75%" />
 <p class="caption">
 相关图-聚类排序
 </p>
@@ -137,7 +137,7 @@ ggplot2不能直接绘制热图与相关图的结合图，这时，可以自行�
 ``` R
     heatmap1(mydata,type='data',Sig=FALSE,Nbreaks = 8)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h5-1.png" alt="heatmap相关图" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h5-1.png" alt="heatmap相关图" width="75%" />
 <p class="caption">
 heatmap相关图
 </p>
@@ -148,7 +148,7 @@ heatmap相关图
 ``` R
     heatmap1(mydata,type='data',Sig=TRUE,Nbreaks = 8)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h6-1.png" alt="heatmap相关图-p值和显著性" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h6-1.png" alt="heatmap相关图-p值和显著性" width="75%" />
 <p class="caption">
 heatmap相关图-p值和显著性
 </p>
@@ -157,7 +157,7 @@ heatmap相关图-p值和显著性
 ``` R
     heatmap1(mydata,type='data',Sig=TRUE,order=TRUE,Nbreaks = 6)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h7-1.png" alt="heatmap相关图-p值和显著性-聚类排序" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h7-1.png" alt="heatmap相关图-p值和显著性-聚类排序" width="75%" />
 <p class="caption">
 heatmap相关图-p值和显著性-聚类排序
 </p>
@@ -171,7 +171,7 @@ heatmap相关图-p值和显著性-聚类排序
 
     heatmap1(label)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h8-1.png" alt="heatmap1随意矩阵图" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h8-1.png" alt="heatmap1随意矩阵图" width="75%" />
 <p class="caption">
 heatmap1随意矩阵图
 </p>
@@ -197,7 +197,7 @@ heatmap1随意矩阵图
     heatmap1(label,type='matrix',df.label=label2,
             gtitle='corr',Nbreaks = 8)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h9-1.png" alt="heatmap1随意矩阵图及其标签矩阵" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h9-1.png" alt="heatmap1随意矩阵图及其标签矩阵" width="75%" />
 <p class="caption">
 heatmap1随意矩阵图及其标签矩阵
 </p>
@@ -208,7 +208,7 @@ heatmap1随意矩阵图及其标签矩阵
     label3=label2[1:9,1:9]
     heatmap1(mydata,type='data',df.label=label3,Nbreaks = 6)
 ``` 
-<img src="/../../../../../../programming/r/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h10-1.png" alt="heatmap相关图-任意标签" width="75%" />
+<img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h10-1.png" alt="heatmap相关图-任意标签" width="75%" />
 <p class="caption">
 heatmap相关图-任意标签
 </p>
