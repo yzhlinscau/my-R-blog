@@ -10,14 +10,11 @@ tags:
 
 在多地点试验中，突出的一个问题是林木基因型与环境之间往往存在显著的交互作用(Genotype
 by environment interaction,
-GEI)，因此如何准确评估GEI对于后续林木良种的选育和推广至关重要。目前，农业上大多使用联合回归法^[Finlay K W, Wilkinson G N. The analysis of adaptation in a plant
-breeding programme [J]. Aust J Agric Res, 1963, 14: 742-754]、主效可加互作可乘模型(Additive
+GEI)，因此如何准确评估GEI对于后续林木良种的选育和推广至关重要。目前，农业上大多使用联合回归法^[1]、主效可加互作可乘模型(Additive
 main effects multiplicative interaction,
-AMMI)^[Gauch H G, Zobel R W. Identifying mega-environments and targeting
-genotypes [J]. Crop Sci, 1997, 37: 311-326]和基因型主效加基因型-环境互作效应双标图(Genotype Main Effect
+AMMI)^[2]和基因型主效加基因型-环境互作效应双标图(Genotype Main Effect
 plus Genotype-by-Environment Interaction biplot, GGE双标图)
-^[Yan W. GGEbiplot—a Windows application for graphical analysis of multi-environment trial data and other types of two-way data [J]. Agron J, 2001, 93:1111-1118]分析多点试验，并据此来进行品种评价、试验点评价和品种生态区划分，其中GGE双标图越来越受关注。迄今，GGE双标图在林木上的应用^[程玲,张心菲, 张鑫鑫,等. 基于BLUP和GGE双标图的林木多地点试验分析[J].
-西北农林科技大学学报(自然科学版), 2018,46(3):87-93]仍然很少，仅在少数树种如辐射松、杨树和乐昌含笑中有过报道。
+^[3]分析多点试验，并据此来进行品种评价、试验点评价和品种生态区划分，其中GGE双标图越来越受关注。迄今，GGE双标图在林木上的应用^[4]仍然很少，仅在少数树种如辐射松、杨树和乐昌含笑中有过报道。
 
 <!--more-->
 
@@ -161,7 +158,7 @@ plus Genotype-by-Environment Interaction biplot, GGE双标图)
     plot(model)
     AMMI.contour(model,distance=0.7,shape=8,col="red",lwd=2,lty=5)
 ```
-<img src="../../../../../../img/AMMI.png" alt=" AMMI模型的双标图" width="65%" />
+<img src="img/AMMI.png" alt=" AMMI模型的双标图" width="65%" />
 <p class="caption">
 图1 AMMI模型的双标图
 </p>
@@ -184,4 +181,10 @@ plus Genotype-by-Environment Interaction biplot, GGE双标图)
 -   未能充分展示试验地点间的关系。 
 
 ## 04 参考文献
+[1] Finlay K W, Wilkinson G N. The analysis of adaptation in a plant breeding programme [J]. Aust J Agric Res, 1963, 14: 742-754
 
+[2] Gauch H G, Zobel R W. Identifying mega-environments and targeting genotypes [J]. Crop Sci, 1997, 37: 311-326
+
+[3] Yan W. GGEbiplot—a Windows application for graphical analysis of multi-environment trial data and other types of two-way data [J]. Agron J, 2001, 93:1111-1118
+
+[4] 程玲,张心菲, 张鑫鑫,等. 基于BLUP和GGE双标图的林木多地点试验分析[J].西北农林科技大学学报(自然科学版), 2018,46(3):87-93
