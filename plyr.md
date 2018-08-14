@@ -39,7 +39,7 @@ tags:
       geom_text(x=250,y=450,aes(label=formula), data=labels, parse=TRUE,hjust=0) +
       geom_text(x=250,y=415,aes(label=r2),data=labels,parse=TRUE,hjust=0)
 ```
-<img src="/../../../../../../programming/r/plyr_files/figure-html/unnamed-chunk-1-1.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/plyr_files/figure-html/unnamed-chunk-1-1.png" width="65%" style="display: block; margin: auto;" />
 
 上述图形实现的思路是，编一个函数lm\_labels()进行目标数据的线性回归并返回线性方程及其R2，然后通过plyr包的ddply()对分组变量或因子Spacing进行函数lm\_labels()的运算，最后返回一个数据框labels。labels含有注释所需的所有信息，再通过geom\_text()添加到图形中。
 
