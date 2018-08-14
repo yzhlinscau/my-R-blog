@@ -97,10 +97,10 @@ spyder3
 在python及其module安装过程中出现的种种问题，我只想说，python有点操蛋！太折腾人！软件与module的安装，应该像R学习！要让用户简单上手，而非一遍遍得检索与尝试！
 
 # 参考文献
-[1] 本人网盘http://pan.scau.edu.cn/l/2nfiM5
-[2] https://blog.csdn.net/gb4215287/article/details/78247568
-[3] https://blog.csdn.net/gangeqian2/article/details/79307416
-[4]  https://pip.pypa.io/en/stable/installing/
-[5] https://jingyan.baidu.com/article/3f16e003c408142591c103b2.html
-[6] https://www.cnblogs.com/wqpkita/p/7248525.html
-[7] https://www.scivision.co/python-windows-visual-c++-14-required/
+[1] 本人网盘http://pan.scau.edu.cn/l/2nfiM5   
+[2] https://blog.csdn.net/gb4215287/article/details/78247568    
+[3] https://blog.csdn.net/gangeqian2/article/details/79307416     
+[4]  https://pip.pypa.io/en/stable/installing/    
+[5] https://jingyan.baidu.com/article/3f16e003c408142591c103b2.html    
+[6] https://www.cnblogs.com/wqpkita/p/7248525.html    
+[7] https://www.scivision.co/python-windows-visual-c++-14-required/    
