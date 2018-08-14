@@ -125,6 +125,7 @@ ggplot(data, aes(x=,y=, fill=))+ geom\_tile()
 
     pcorr %+% cormat1
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h4-1.png" alt="相关图-聚类排序" width="75%" />
 <p class="caption">
 相关图-聚类排序
@@ -137,6 +138,7 @@ ggplot2不能直接绘制热图与相关图的结合图，这时，可以自行�
 ``` R
     heatmap1(mydata,type='data',Sig=FALSE,Nbreaks = 8)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h5-1.png" alt="heatmap相关图" width="75%" />
 <p class="caption">
 heatmap相关图
@@ -148,6 +150,7 @@ heatmap相关图
 ``` R
     heatmap1(mydata,type='data',Sig=TRUE,Nbreaks = 8)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h6-1.png" alt="heatmap相关图-p值和显著性" width="75%" />
 <p class="caption">
 heatmap相关图-p值和显著性
@@ -157,6 +160,7 @@ heatmap相关图-p值和显著性
 ``` R
     heatmap1(mydata,type='data',Sig=TRUE,order=TRUE,Nbreaks = 6)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h7-1.png" alt="heatmap相关图-p值和显著性-聚类排序" width="75%" />
 <p class="caption">
 heatmap相关图-p值和显著性-聚类排序
@@ -171,10 +175,12 @@ heatmap相关图-p值和显著性-聚类排序
 
     heatmap1(label)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h8-1.png" alt="heatmap1随意矩阵图" width="75%" />
 <p class="caption">
 heatmap1随意矩阵图
 </p>
+
 ``` R
     # 两个矩阵的粘贴
     matrix.ps<-function(a,b){
@@ -197,6 +203,7 @@ heatmap1随意矩阵图
     heatmap1(label,type='matrix',df.label=label2,
             gtitle='corr',Nbreaks = 8)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h9-1.png" alt="heatmap1随意矩阵图及其标签矩阵" width="75%" />
 <p class="caption">
 heatmap1随意矩阵图及其标签矩阵
@@ -208,6 +215,7 @@ heatmap1随意矩阵图及其标签矩阵
     label3=label2[1:9,1:9]
     heatmap1(mydata,type='data',df.label=label3,Nbreaks = 6)
 ``` 
+
 <img src="img/heatmap1-for-correlation-p-value-in-ggplot2_files/figure-html/h10-1.png" alt="heatmap相关图-任意标签" width="75%" />
 <p class="caption">
 heatmap相关图-任意标签
