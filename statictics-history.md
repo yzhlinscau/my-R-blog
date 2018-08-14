@@ -108,16 +108,19 @@ str(dat)
 ``` R
     ggplot(dat, aes(yield)) + geom_histogram(col='blue',fill='white')
 ``` 
+
 <img src="img/statictics-history_files/figure-html/h1-1.png" alt=" 目标性状yield的直方图" width="65%" />
 <p class="caption">
 Fig.1 目标性状yield的直方图
 </p>
+
 ``` R
     ggplot(dat, aes(row, col, fill = yield)) +
       geom_tile(show.legend = TRUE) +
       coord_fixed() + coord_flip()+
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
+
 <img src="img/statictics-history_files/figure-html/h2-1.png" alt=" 目标性状yield的空间趋势" width="65%" />
 <p class="caption">
 Fig.2 目标性状yield的空间趋势
@@ -194,6 +197,7 @@ SUM模型的空间相关误差趋势图如下：
     plot(SUM.bdR, type = 'spatial')+coord_flip()+
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
+
 <img src="img/statictics-history_files/figure-html/unnamed-chunk-6-1.png" alt=" SUM模型的空间相关误差趋势图" width="65%" />
 <p class="caption">
 Fig.3 SUM模型的空间相关误差趋势图
@@ -266,6 +270,7 @@ RowAR模型的空间相关误差趋势图如下：
        )) + coord_flip() +
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
+
 <img src="img/statictics-history_files/figure-html/unnamed-chunk-10-1.png" alt="四种模型的空间相关误差趋势图" width="100%" />
 <p class="caption">
 Fig.4 四种模型的空间相关误差趋势图
