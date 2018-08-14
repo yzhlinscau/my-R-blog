@@ -192,7 +192,7 @@ res2$h1$comp2
     print(res2$h1$y.hist)
 ```
 
-<img src="/../../../../../../programming/r/aov-batch_files/figure-html/unnamed-chunk-4-1.png" alt=" 性状h1的直方图" width="65%" />
+<img src="img/aov-batch_files/figure-html/unnamed-chunk-4-1.png" alt=" 性状h1的直方图" width="65%" />
 <p class="caption">
 性状h1的直方图
 </p>
