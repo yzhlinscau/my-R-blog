@@ -14,8 +14,7 @@ author: 'Yuanzhen Lin'
 
 <!--more-->
 
-空间分析(spatial
-analysis)现已成为农林业遗传评估的常见方法之一，但其最早提出者竟是一位医生^[<https://www.zhihu.com/question/28409028>]，这出乎我的意料。话说1840s末期，伦敦爆发了严重的霍乱疫情，死了不少人。主流理论认为霍乱通过“肮脏的空气”传染的，这错误理论导致霍乱未能得到有效控制。伦敦皇家外科医学院有位医生，名叫John
+空间分析(spatial analysis)现已成为农林业遗传评估的常见方法之一，但其最早提出者竟是一位医生^[1]，这出乎我的意料。话说1840s末期，伦敦爆发了严重的霍乱疫情，死了不少人。主流理论认为霍乱通过“肮脏的空气”传染的，这错误理论导致霍乱未能得到有效控制。伦敦皇家外科医学院有位医生，名叫John
 Snow，虽然年纪轻轻但已事业有成，他不认同霍乱传染的主流理论，他认为水里携带的细菌才是主因。他用几年时间，走遍伦敦进行详细调研和病情记录，绘制了如下的点图：
 
 <img src="https://pic2.zhimg.com/80/111000c0a7f37113e98b211a00f74d0d_hd.jpg" width="45%" style="display: block; margin: auto;" />
@@ -34,7 +33,7 @@ Snow调查表明疾病的发病率跟地理位置是相关的，这就是空间�
 遗传评估分析的通用混合线性模型如下：
 $$y=xb+zu+e$$
 
-对于空间分析^[林元震主编.《R与ASReml-R统计学》.中国林业出版社.2017]，将上式中的误差e进一步分解为e = ξ + η。ξ为空间相关的误差，η为空间不相关的随机误差。η反应了微环境差异、非加性遗传效应以及测量误差。 
+对于空间分析^[2]，将上式中的误差e进一步分解为e = ξ + η。ξ为空间相关的误差，η为空间不相关的随机误差。η反应了微环境差异、非加性遗传效应以及测量误差。 
     
  Authur等(1997)将ξ设为行、列的自回归AR1$\otimes$AR1，因此其方差协方差矩阵为：
 
@@ -109,9 +108,9 @@ str(dat)
 ``` R
     ggplot(dat, aes(yield)) + geom_histogram(col='blue',fill='white')
 ``` 
-<img src="/../../../../../../programming/r/statictics-history_files/figure-html/h1-1.png" alt=" 目标性状yield的直方图" width="65%" />
+<img src="img/statictics-history_files/figure-html/h1-1.png" alt=" 目标性状yield的直方图" width="65%" />
 <p class="caption">
-目标性状yield的直方图
+Fig.1 目标性状yield的直方图
 </p>
 ``` R
     ggplot(dat, aes(row, col, fill = yield)) +
@@ -119,9 +118,9 @@ str(dat)
       coord_fixed() + coord_flip()+
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
-<img src="/../../../../../../programming/r/statictics-history_files/figure-html/h2-1.png" alt=" 目标性状yield的空间趋势" width="65%" />
+<img src="img/statictics-history_files/figure-html/h2-1.png" alt=" 目标性状yield的空间趋势" width="65%" />
 <p class="caption">
-目标性状yield的空间趋势
+Fig.2 目标性状yield的空间趋势
 </p>
 
 (2.1)分析模型
@@ -195,9 +194,9 @@ SUM模型的空间相关误差趋势图如下：
     plot(SUM.bdR, type = 'spatial')+coord_flip()+
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
-<img src="/../../../../../../programming/r/statictics-history_files/figure-html/unnamed-chunk-6-1.png" alt=" SUM模型的空间相关误差趋势图" width="65%" />
+<img src="img/statictics-history_files/figure-html/unnamed-chunk-6-1.png" alt=" SUM模型的空间相关误差趋势图" width="65%" />
 <p class="caption">
-SUM模型的空间相关误差趋势图
+Fig.3 SUM模型的空间相关误差趋势图
 </p>
 
 ### (2.1.3) 模型3–ColAR空间模型
@@ -267,9 +266,9 @@ RowAR模型的空间相关误差趋势图如下：
        )) + coord_flip() +
       scale_fill_gradientn(colours = topo.colors(50))
 ``` 
-<img src="/../../../../../../programming/r/statictics-history_files/figure-html/unnamed-chunk-10-1.png" alt="四种模型的空间相关误差趋势图" width="100%" />
+<img src="img/statictics-history_files/figure-html/unnamed-chunk-10-1.png" alt="四种模型的空间相关误差趋势图" width="100%" />
 <p class="caption">
-四种模型的空间相关误差趋势图
+Fig.4 四种模型的空间相关误差趋势图
 </p>
 
 从图4可以明显看出空间模型与RCB模型的图形较大，虽然3种空间模型的变化比较小，但认真查看，还是能看到微小的差异。此外，对于空间分析，还有variogram(半残差)图，但因为breedR包提供的variogram图实在太丑了，这里不做演示。
@@ -1189,26 +1188,21 @@ Scout66
 </tbody>
 </table>
 
-从输出结果看，OMG，结果相差甚远！尤其是RCB模型与最优模型SUM之间，基本完全不同，例如SUM中最好的基因型Buckskin在模型RCB仅排名第28名，而且产量被RCB模型严重低估了！本例中，基因型Buckskin在RCB模型中就是‘怀才不遇型’；基因型NE86503在RCB模型中就是‘滥竽充数型’，合理的空间分析模型给予了纠正。即便是3种空间模型，它们之间的差异也较大。此外，最优模型的标准误se也最小！**<span
-style="color:red">这结果验证了空间分析的优越性，也验证了统计分析方法的重要性！</span>**
+从输出结果看，OMG，结果相差甚远！尤其是RCB模型与最优模型SUM之间，基本完全不同，例如SUM中最好的基因型Buckskin在模型RCB仅排名第28名，而且产量被RCB模型严重低估了！本例中，基因型Buckskin在RCB模型中就是‘怀才不遇型’；基因型NE86503在RCB模型中就是‘滥竽充数型’，合理的空间分析模型给予了纠正。即便是3种空间模型，它们之间的差异也较大。此外，最优模型的标准误se也最小！**<span style="color:red">这结果验证了空间分析的优越性，也验证了统计分析方法的重要性！</span>**
 
 空间分析结果对人生的提示：只要是金子，迟早会发光，即便一段时间内怀才不遇；如果是狐假虎威，迟早会败露，即便一段时间内风光无限。
 
 3 结语
 ------
 
-3.1 **<span
-style="color:red">从本例的分析结果来看，选择最好的软件非常有必要！此外，关注新的统计方法也非常关键！</span>**本例结果显示SUM是最优模型，那么它有没再改进的可能？答案是肯定的，感兴趣的读者可以阅读本人的一篇文章^[<http://blog.sciencenet.cn/blog-1114360-1071888.html>]。    
+3.1 **<span style="color:red">从本例的分析结果来看，选择最好的软件非常有必要！此外，关注新的统计方法也非常关键！</span>**本例结果显示SUM是最优模型，那么它有没再改进的可能？答案是肯定的，感兴趣的读者可以阅读本人的一篇文章^[3]。    
 3.2
 空间分析的使用条件。诚如已有菜谱，但能否每人都根据菜谱做出可口的上等好菜，这需要磨练和时间。同理，空间分析模型虽好，也得要知道它的使用条件和判断标准。首先，数据集里必须有行列号；其次，对于简单数据集，模型不可过于复杂，否则可能会造成过拟合(overfit)；再者，合理的空间模型可能并唯一，但不合理的空间模型可能会导致结果高估或低估。
 
-后话：虽然空间分析已成为农林业国际的常用方法之一，但其在国内林业遗传评估上的应用仍然有限！我最近搜了搜关于数量遗传学的著作或教材，国内外也是更新极慢，经典当属《Intrudction
-to quantitative genetics(4th)》(1996年)和《Genetics and Analysis of
-Quantitative Traits》(1998年)，历经20年了！第一本经典的作者Douglaus
-Falconer，可惜已于2004年逝世。第二本的作者今年出版第二部[《Evolution and
-Selection of Quantitative
-Traits》](https://www.amazon.com/Evolution-Selection-Quantitative-Traits-Bruce/dp/0198830874/ref=sr_1_1?ie=UTF8&qid=1532787119&sr=8-1&keywords=Evolution-Selection-Quantitative-Traits)，9月份出版！其实，关于统计分析史的那些大师们，有些故事还是非常耐人寻味的！多少有点遗憾，迷人的统计故事都是国外的大师造就的。
+后话：虽然空间分析已成为农林业国际的常用方法之一，但其在国内林业遗传评估上的应用仍然有限！我最近搜了搜关于数量遗传学的著作或教材，国内外也是更新极慢，经典当属《Intrudction to quantitative genetics(4th)》(1996年)和《Genetics and Analysis of Quantitative Traits》(1998年)，历经20年了！第一本经典的作者Douglaus Falconer，可惜已于2004年逝世。第二本的作者今年出版第二部[《Evolution and Selection of Quantitative Traits》](https://www.amazon.com/Evolution-Selection-Quantitative-Traits-Bruce/dp/0198830874/ref=sr_1_1?ie=UTF8&qid=1532787119&sr=8-1&keywords=Evolution-Selection-Quantitative-Traits)，9月份出版！其实，关于统计分析史的那些大师们，有些故事还是非常耐人寻味的！多少有点遗憾，迷人的统计故事都是国外的大师造就的。
 
 参考资料
 --------
-
+[1] https://www.zhihu.com/question/28409028     
+[2] 林元震主编.《R与ASReml-R统计学》.中国林业出版社.2017   
+[3] http://blog.sciencenet.cn/blog-1114360-1071888.html   
