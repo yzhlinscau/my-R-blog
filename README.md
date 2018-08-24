@@ -1,4 +1,4 @@
-# github.com
+# my R blog
 my blog website: https://yzhlinscau2018.netlify.com/
 
 [2018-08-24-R基本功之读取数据](https://github.com/yzhlinscau/github.com/blob/master/read-file.md)      
