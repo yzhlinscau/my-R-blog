@@ -1,6 +1,8 @@
 # github.com
 my blog
 
+[2018-08-24-R基本功之读取数据](https://github.com/yzhlinscau/github.com/blob/master/read-file.md)      
+[2018-08-22-自交对植物遗传评估的影响](https://github.com/yzhlinscau/github.com/blob/master/self.md)    
 [2018-08-14-用R进行G×E互作的AMMI模型分析](https://github.com/yzhlinscau/github.com/blob/master/AMMI-in-R.md)         
 [2018-08-07-python3.7及其module的安装--win7系统](https://github.com/yzhlinscau/github.com/blob/master/install-python.md)    
 [2018-07-30-for循环与plyr包执行方差分析及其多重比较的批量分析](https://github.com/yzhlinscau/github.com/blob/master/aov-batch.md)     
