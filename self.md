@@ -117,7 +117,7 @@ summary(stm.asr)$varcomp
 由于近亲繁殖，部分自交群体的观测方差不止代表了非自交参考群体中的加性方差。因此，当自交率增加时，非自交参考群体中的遗传方差估计减少，而误差方差增大，但表型方差总体趋于稳定。     
 
 可以将上述结果图形化，以观测三者的变化趋势：
-<img src="../../../../../../img/self.png" width="65%" style="display: block; margin: auto;" />
+<img src="img/self.png" width="65%" style="display: block; margin: auto;" />
 
 参考文献
 --------
