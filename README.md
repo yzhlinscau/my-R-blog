@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/140153442.svg)](https://zenodo.org/badge/latestdoi/140153442)
+
 # my R blog
 my blog website: https://yzhlinscau2018.netlify.com/
 
